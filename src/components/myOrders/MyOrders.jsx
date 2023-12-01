@@ -11,19 +11,35 @@ const MyOrders = () => {
         <table>
           <thead>
             <tr>
-              <th>Order Id</th>
-              <th>Status</th>
-              <th>Item Qty</th>
-              <th>Amount</th>
-              <th>Payment Method</th>
-              <th>Action</th>
+              <th>Número de pedido</th>
+              <th>Estado</th>
+              <th>Cantidad</th>
+              <th>Importe</th>
+              <th>Método de pago</th>
+              <th>Ver más</th>
             </tr>
           </thead>
 
-          <tbody>
-//     Add the code for the table body
-           
-          </tbody>
+            
+            <tbody>
+                {arr.map((i) => (
+            <tr key={i}>
+              <td>#ON????????</td>
+              <td>En curso</td>
+              <td>3</td>
+              <td>€ {16.00}</td>
+              <td>pago contra entrega</td>           
+              <td>
+                      <Link to={`/order/${"ON00012345"}`}>
+                      <AiOutlineEye />
+                      </Link>
+              </td>
+
+            </tr>
+            ))}
+
+            </tbody>
+            
         </table>
       </main>
     </section>
